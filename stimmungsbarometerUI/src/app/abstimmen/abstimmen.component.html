@@ -1,0 +1,41 @@
+<mat-form-field class="name-input" appearance="fill">
+  <mat-label>Name</mat-label>
+  <input type="text"
+         matInput
+         [(ngModel)]="memberName">
+</mat-form-field>
+
+<section></section>
+
+<mat-form-field class="team-input" appearance="fill">
+  <mat-label>Team</mat-label>
+  <input type="text"
+         matInput
+         [(ngModel)]="teamName">
+</mat-form-field>
+
+<section></section>
+
+<h3>Wie ist deine Stimmung gerade?</h3>
+<mat-button-toggle-group name="stimmung" [(ngModel)]="stimmung">
+  <mat-button-toggle [value]="1">:-((</mat-button-toggle>
+  <mat-button-toggle [value]="2">:-(</mat-button-toggle>
+  <mat-button-toggle [value]="3">:-/</mat-button-toggle>
+  <mat-button-toggle [value]="4">:-)</mat-button-toggle>
+  <mat-button-toggle [value]="5">:-))</mat-button-toggle>
+</mat-button-toggle-group>
+
+<section></section>
+
+<mat-slider
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="1"
+  min="0"
+  max="20"
+  [(ngModel)]="coffee">
+</mat-slider>
+
+<section></section>
+
+<button mat-raised-button (click)="vote()">Speichern</button>

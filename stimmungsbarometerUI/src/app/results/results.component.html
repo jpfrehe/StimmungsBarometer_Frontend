@@ -1,0 +1,17 @@
+<mat-form-field class="team-input" appearance="fill">
+  <mat-label>Name des Teams</mat-label>
+  <input type="text"
+         matInput
+         [(ngModel)]="teamName">
+</mat-form-field>
+<button mat-raised-button (click)="getTeamResults()">Suche</button>
+
+<section></section>
+
+<mat-card *ngIf="average">Eure durchschnittliche Stimmung: {{average}}</mat-card>
+
+<mat-card *ngIf="min">Die schlechteste Stimmung: {{min}}</mat-card>
+
+<mat-card *ngIf="max">Die beste Stimmung: {{max}}</mat-card>
+
+<mat-card *ngIf="coffee">Die Anzahl aller getrunkenen Kaffees im Team: {{coffee}}</mat-card>
